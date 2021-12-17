@@ -83,20 +83,14 @@ function div(a, b) {
 
 /*  ### 6  */
 function mathOperation(arg1, arg2, operation) {
-	let res = null;
 	switch (operation) {
 		case "sum":
-			res = sum(arg1, arg2);
-			break;
+			return sum(arg1, arg2);
 		case "sub":
-			res = sub(arg1, arg2);
-			break;
+			return sub(arg1, arg2);
 		case "mult":
-			res = mult(arg1, arg2);
-			break;
+			return mult(arg1, arg2);
 		case "div":
-			res = div(arg1, arg2);
-			break;
+			return div(arg1, arg2);
 	}
-	return res;
 }
