@@ -77,4 +77,4 @@ function GenerateCart(cart){
 	document.body.appendChild(div);
 }
 
-window.onload = init;
+window.addEventListener('load', init);
