@@ -15,7 +15,6 @@ var it2 = {
 function getItem1() {
 	let item1 = document.createElement("div");
 	item1.className = 'item1';
-	// item1.style.border = '1px solid black';
 	item1.style.marginTop = '50%';
 	item1.style.paddingBottom = '20px';
 	item1.innerHTML = it1.name + it1.price + '$ ';
@@ -25,7 +24,6 @@ function getItem1() {
 function getItem2() {
 	let item2 = document.createElement("div");
 	item2.className = 'item2';
-	// item2.style.border = '1px solid black';
 	item2.innerHTML = it2.name + it2.price + '$ ';
 	return (item2);
 }
@@ -49,9 +47,7 @@ function initCart() {
 			}
 			return (sum);
 		},
-		// total: '<br> Total: ' + cart.countCartPrice(),
 	};
-	// makeCart(cart);
 	return (cart);
 }
 
