@@ -2,7 +2,12 @@
  * 2. Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре. 
 Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS: Пустая корзина должна выводить строку «Корзина пуста»;
 Наполненная должна выводить «В корзине: n товаров на сумму m рублей».
- */
+ 
+   3. Сделать так, чтобы товары в каталоге выводились при помощи JS:
+Создать массив товаров (сущность Product);
+При загрузке страницы на базе данного массива генерировать вывод из него. HTML-код должен содержать только div id=”catalog” без вложенного кода. Весь вид каталога генерируется JS.
+*/
+
 
 function init(){
 	var cart = {
@@ -28,24 +33,14 @@ function init(){
 }
 
 function makeCart (cart){ 	
-	item1 = {
-		id: 1,
-		name: "T-shirt",
-		price: 10,
-		quantity: 1,
+	let catalog = [
+		{id: 1, name: 'T-shirt', price: 10, quantity: 1}, 
+		{id: 2, name: 'Skirt', price: 15, quantity: 1}, 
+	]
+	for (let prod of catalog){
+		cart.addItemToCart(prod);
 	}
-
-	item2 = {
-		id: 2,
-		name: "Skirt",
-		price: 15,
-		quantity: 1,
-	}
-
-	cart.addItemToCart(item1);
-	cart.addItemToCart(item1);
-	cart.addItemToCart(item2);
-
+	cart.addItemToCart(catalog[0]);
 	GenerateCart(cart);
 }
 

@@ -46,7 +46,7 @@ function createTable() {
 
 window.onload = createTable;
 
-/**
+
 window.onload = function createTable() { 
 	let row, cell, i;
 	let chessboard = document.createElement('chessboard');
@@ -81,4 +81,3 @@ window.onload = function createTable() {
 	}
 	document.body.appendChild(chessboard);
 };
- */
