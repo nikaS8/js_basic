@@ -1,1 +1,1 @@
-# js_basic
+# js_basic snake game
